@@ -20,8 +20,7 @@ public class cartpage extends registeracc{
 		
 		Select size= new Select(driver.findElement(By.cssSelector("#product_attribute_6")));
 		size.selectByIndex(3);
-		
-		
+
 		Select color= new Select(driver.findElement(By.cssSelector("#product_attribute_7")));
 		color.selectByIndex(1);
 		
@@ -30,7 +29,6 @@ public class cartpage extends registeracc{
 		WebElement quantity=driver.findElement(By.cssSelector("#product_enteredQuantity_24"));
 		quantity.clear();
 		quantity.sendKeys("2");
-		
 		
 		WebElement element = driver.findElement(By.id("add-to-cart-button-24"));
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
@@ -50,10 +48,8 @@ public class cartpage extends registeracc{
 		Thread.sleep(3000);
 	}
 	
-	
 	@Test(priority=13)
 	public static void removefromcar() throws InterruptedException {
-			
 			
 		driver.findElement(By.xpath("//tbody/tr[1]/td[7]/button[1]")).click();
 			Thread.sleep(6000);
